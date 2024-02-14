@@ -1,0 +1,29 @@
+*{
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+.container {
+    text-align: center;
+    background-color: pink;
+    margin: auto;
+    padding: 50px;
+}
+.second-section{
+    background-color: rgb(176, 146, 205);
+    text-align: center;
+    height: 50px;
+}
+.third-section{
+    background-color: azure;
+    text-align: center;
+}
+footer{
+    position:fixed;
+    left: 0;
+    bottom :0;
+    right: 0;
+    color: black;
+    text-align: center;
+    background-color: pink;
+}
