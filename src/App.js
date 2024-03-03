@@ -1,18 +1,15 @@
-import LandingPage from './Components/Pages/Landing Page/landing-page';
-import SignUp from './Components/Authentication/sign-up';
-import Login from './Components/Authentication/login';
-import ResetPassword from './Components/Authentication/reset-password';
+import Navbar from './Components/Navigation Bar/nav-bar';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [theme, setTheme]= useState('light');
   return (
-    <>
-    <LandingPage/>
-    <SignUp/>
-    <Login/>
-    <ResetPassword/>
-    </>
+    <div className={`container ${theme}`}>
+    <Navbar theme ={theme} setTheme={setTheme} />
+    </div>
   );
 }
 
 export default App;
+
