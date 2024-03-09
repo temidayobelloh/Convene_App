@@ -1,57 +1,70 @@
-.convene_logo{
+/* Styles.css */
+
+.convene_logo {
     width: 180px;
     cursor: pointer;
 }
-.nav_bar{
-    width:100%;
-    height: 98px;
+
+.nav_bar {
+    width: 100%;
+    height: 85px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff;
+    background: #fff;
     padding: 15px 7%;
     transition: 0.5s;
 }
+
 .nav_bar.dark {
     background-color: #000;
     color: #fff;
 }
-ul{
-    flex: 1;
-    list-style: none;
-    text-align: center;
-}
-ul li{
-    display: inline-block;
-    margin: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-}
-.search-box{
+
+.search-box {
     display: flex;
     align-items: center;
     background-color: #242424;
     padding: 10px 20px;
     border-radius: 50px;
 }
-.search-box input {
+
+.search-box input[type="text"] {
     padding: 6px;
     background: transparent;
-    border: 0;
-    outline: 0;
+    border: none;
+    outline: none;
     color: #fff;
     font-size: 15px;
     max-width: 200px;
 }
-.search-box input::placeholder{
+
+.search-box input[type="text"]::placeholder {
     color: white;
 }
+
 .search-box img {
     width: 20px;
     cursor: pointer;
 }
-.toggle_icon{
-width: 40px;
-cursor: pointer;
-margin-left: 40px;
+
+.toggle_icon {
+    width: 40px;
+    cursor: pointer;
+    margin-left: 40px;
+    background: black;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around; /* or space-between */
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 0 20px;
+    font-size: 18px;
+    cursor: pointer;
 }
