@@ -1,59 +1,77 @@
-/* HeroSection.css */
-
 .hero-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align content to the start of the flex container */
     align-items: center;
     height: 100vh;
-    background-color: #f3f4f6;
+    background-image: url('https://images.pexels.com/photos/16265006/pexels-photo-16265006/free-photo-of-pink-background-with-a-corner-decoration-from-leaves-and-eggs.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hero-content {
-    text-align: center;
+    text-align: left; /* Align text to the left */
+    padding-left: 5%; /* Add padding to separate from the edge */
+    opacity: 0; /* Set initial opacity to 0 for fade-in effect */
+    animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
 }
 
 .hero-title {
-    font-size: 3rem;
-    color: #333;
+    font-size: 3.5rem;
+    color: #0c0c0c;
     margin-bottom: 1rem;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
-    color: #666;
+    font-size: 1.2rem; /* Adjusted font size */
+    color: #272626;
     margin-bottom: 2rem;
+    max-width: 500px; /* Set maximum width */
+    line-height: 1.5; /* Adjusted line height for readability */
 }
 
 .cta-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align buttons to the start of the flex container */
+    margin-top: 2rem;
+    padding-left: 5%; /* Add padding to separate from the edge */
 }
 
 .cta-button {
-    padding: 12px 30px;
-    font-size: 1rem;
+    padding: 15px 35px;
+    font-size: 1.2rem;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center;
+    margin-right: 20px;
 }
 
 .signup-button {
-    background-color: #4CAF50;
+    background-color: #ff6f61;
     color: #ffffff;
-    margin-right: 10px;
 }
 
 .signup-button:hover {
-    background-color: #45a049;
+    background-color: #e65c4b;
 }
 
 .login-button {
-    background-color: #007bff;
+    background-color: #0a1f35;
     color: #ffffff;
 }
 
 .login-button:hover {
     background-color: #0056b3;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

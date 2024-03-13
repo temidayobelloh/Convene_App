@@ -1,4 +1,4 @@
-h2{
+h2 {
     margin-bottom: 15px;
 }
 
@@ -25,15 +25,16 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center; /* Center content horizontally */
+    position: relative; /* Added position relative */
 }
 
 .close {
     color: #aaa;
     font-size: 28px;
     font-weight: bold;
-    align-self: flex-end; /* Align to the end of the container */
-    margin-left: auto; /* Push to the right */
-    margin-bottom: 10px; /* Add some bottom margin */
+    position: absolute; /* Change position to absolute */
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
     cursor: pointer;
 }
 

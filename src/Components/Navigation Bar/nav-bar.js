@@ -1,31 +1,39 @@
-import React from 'react';
-import conveneLogo from '../../assets/convene_logo.svg';
-import searchIconLight from '../../assets/search-w.png';
-import searchIconDark from '../../assets/search-b.png';
-import logoLight from '../../assets/day.png';
-import logoDark from '../../assets/night.png';
-
+import convene from '../../assets/partner_exchange_FILL0_wght400_GRAD0_opsz24.svg';
 import './nav-bar.css';
-const Navbar = ({theme, setTheme}) => {
-    const toggle_mode =()=>{
-        theme ==='light' ? setTheme('dark') : setTheme ('light');
-    }
-  return (
-    <div className='nav_bar'>
-      <img src={conveneLogo} alt='' className='convene_logo'/>
-      <ul>
-        <li>Home</li>
-        <li>Events</li>
-        <li>Groups</li>
-        <li>Profile</li>
-        </ul>
-        <div className='search-box'>
-        <input type="text" placeholder="Search here"/>
-        <img src={theme === 'light'? searchIconLight: searchIconDark} alt='search-icon'/>
-        </div>
-        <img onClick={()=>{toggle_mode()}} src={theme ==='light' ? logoLight : logoDark} alt='toggle-icon' className='toggle_icon'/>
-    </div>
-  )
-}
 
-export default Navbar;
+ import { Link } from 'react-router-dom';
+ 
+ const NavBar = () => {
+  return (
+    <nav className="navbar">
+      <Link to="/" className="logo-link">
+        <img src={convene} className="convenelogo" alt="Convene Logo" />
+      </Link>
+      <ul className="nav-links">
+        <li>
+          <Link to="/" className="nav-link">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/events" className="nav-link">
+            Events
+          </Link>
+        </li>
+        <li>
+          <Link to="/groups" className="nav-link">
+            User
+          </Link>
+        </li>
+        <li>
+          <Link to="/questions" className="nav-link">
+            Questions
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+ 
+ export default NavBar;

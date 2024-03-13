@@ -23,10 +23,12 @@ const HeroSection = () => {
     return (
         <div className="hero-container">
             <div className="hero-content">
-                <h1 className="hero-title">Welcome to Convene</h1>
-                <p className="hero-subtitle">Crowd-source questions for your meetups</p>
+                <h1 className="hero-title">Welcome to Convene!</h1>
+                <p className="hero-subtitle">Where interests connect, and questions are answered.
+No matter your passion, Convene brings together like-minded individuals just like you.
+Join us to engage, learn, and prioritize the questions that matter most to you.</p>
                 <div className="cta-buttons">
-                    <button className="cta-button signup-button" onClick={handleSignUpButtonClick}>Sign Up</button>
+                    <button className="cta-button signup-button" onClick={handleSignUpButtonClick}>Join us!</button>
                     <button className="cta-button login-button" onClick={handleLoginButtonClick}>Login</button>
                 </div>
             </div>

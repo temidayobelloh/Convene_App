@@ -6,11 +6,36 @@ const SignUpModal = ({ isOpen, onClose }) => {
         alert('Reset password functionality will be implemented here.');
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Implement sign-up logic
-        alert('Sign up functionality will be implemented here.');
+    
+        const formData = new FormData(e.target);
+        const username = formData.get('username');
+        const email = formData.get('email');
+        const password = formData.get('password');
+    
+        try {
+            const response = await fetch('http://localhost:3003/api/auth/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, email, password })
+            });
+    
+            if (response.ok) {
+                alert('Sign up successful! Please log in.'); 
+                onClose(); // Close the modal after successful signup
+            } else {
+                const data = await response.json();
+                alert(data.error || 'Sign up failed. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error during sign up:', error);
+            alert('An error occurred. Please try again later.');
+        }
     };
+    
 
     return (
         <div className={`modal ${isOpen ? 'show' : ''}`}>
@@ -27,7 +52,7 @@ const SignUpModal = ({ isOpen, onClose }) => {
                     <div className="form-group">
                         <input type="password" placeholder="Password" required />
                     </div>
-                    <button type="submit" className="signup-button">Sign Up</button>
+                    <button type="submit" className="signup-button">Join Convene</button>
                 </form>
                 <p className="reset-password" onClick={handleResetPassword}>Forgot your password? Reset it here.</p>
             </div>
