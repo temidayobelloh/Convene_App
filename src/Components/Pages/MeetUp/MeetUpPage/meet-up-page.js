@@ -1,6 +1,6 @@
-import './meet-up-list.css';
 import { useState } from 'react';
-import CommentModal from './MeetUpComments/meet-up-comments';
+import CommentModal from '../MeetUpComments/meet-up-comments';
+import './meet-up-page.css';
 
 const MeetupPage = () => {
   const [questions, setQuestions] = useState([

@@ -1,0 +1,88 @@
+/* Meetup Card */
+.meetup-card {
+    max-width: 800px;
+    margin: 30px auto 50px 60px; /* Add space around the top, left, and bottom of the meetup card */
+    padding: 20px;
+    background-color: #f5b8b8;
+    border-radius: 1px;
+    border: 1px solid rgb(236, 203, 203);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add visible box shadow */
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+  h3 {
+    text-align: left;
+  }
+  
+  .meetup-card > * {
+    margin-bottom: 15px; /* Add vertical spacing between elements inside the meetup card */
+  }
+  
+  /* Question Card */
+  .question-card {
+    padding: 20px;
+    background-color: #f7f7f7; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 15.9px;
+    text-align: left;
+  }
+  
+  .question-card p {
+    margin: 0;
+    font-size: 17px;
+  }
+  
+  .question-card .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Add some space between buttons and text */
+  }
+  
+  .question-card button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #007bff; /* Primary color for buttons */
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .question-card button:not(:last-child) {
+    margin-right: 10px; /* Add spacing between buttons */
+  }
+  
+  .question-card button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  /* Post Question Button */
+  .post-question-button {
+    background-color: #28a745; /* Success color for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 12px 30px;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto; /* Center the button horizontally and add space around it */
+  }
+  
+  .post-question-button:hover {
+    background-color: #218838; /* Darker shade on hover */
+  }
+  
+  /* Textarea */
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da; /* Lighter border color */
+    border-radius: 5px;
+    margin-bottom: 20px; /* Add extra space below the textarea */
+    resize: vertical; /* Allow vertical resizing */
+  }
+  
